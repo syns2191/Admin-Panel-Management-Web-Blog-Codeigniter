@@ -1,0 +1,27 @@
+body{padding:15px}
+
+.notification-list, .n-user-list {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.notification-list > li {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+    padding: 5px 0;
+}
+.notification-list .cat-icon {
+    width: 20px;
+}
+.notification-list .avatar {
+    width: 30px;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+.n-user-list{margin-bottom:5px;}
+.n-user-list:after{clear:both; content:''; display:table;}
+.n-user-list li{float:left;}
+.n-user-list li + li{margin-left:3px;}
+.n-user-list li a, .n-user-list li a:hober{text-decoration:none;}
