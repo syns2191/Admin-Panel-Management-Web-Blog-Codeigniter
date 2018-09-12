@@ -17,6 +17,8 @@ class Post_model extends CI_Model
 		$this->db->order_by('id','desc');
 		if ($query->num_rows() > 0) {
 	        return $this->db->get()->result();
+	      } else {
+	      	return array();
 	      }
 	    return false;
 

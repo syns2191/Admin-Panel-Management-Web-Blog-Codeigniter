@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html>
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,12 +90,15 @@
                                 </div>
                               <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
                                 <ul class="event-list">
-                                  <?php foreach ($post as $post): ?>
-                                    <?php 
-                                        $day = date("d",strtotime($post->dateTime));
-                                        $month = date("M",strtotime($post->dateTime));
+                                  <?php 
+                                    if (count($post) > 0) {
+                                      foreach ($post as $post): 
+                                  ?>
+                                  <?php 
+                                      $day = date("d",strtotime($post->dateTime));
+                                      $month = date("M",strtotime($post->dateTime));
 
-                                     ?>
+                                   ?>
                                      
                                   <li>
                                     <time datetime="2014-07-20">
@@ -119,7 +124,9 @@
                                       </ul>
                                     </div>
                                   </li>
-                                  <?php endforeach; ?>
+                                  <?php 
+                                      endforeach; }
+                                  ?>
                                 </ul>
                                 <?php echo $pagination; ?>
                                 <!-- <div class="blog-paging">

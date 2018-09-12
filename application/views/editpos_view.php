@@ -216,7 +216,7 @@
                                                         </div>
 												<div class="panel-body">
 
-													<?php echo form_open('post/goedit',['role'=>'form']);?>
+													<?php echo form_open('post/goedit/'.$post->id,['role'=>'form']);?>
 														<div class="form-group">
 															<!-- <label for="exampleInputEmail1">Kode Barang</label> -->
 															<input type="text" name="title" class="form-control" id="" placeholder="Title Pos" value="<?php echo $post->title; ?>">

@@ -1,3 +1,4 @@
+
 <?php 
   $data = file_get_contents(site_url('notification/notif')); 
   $listNotif_json = file_get_contents(site_url('notification/listNotif')); 
@@ -14,7 +15,7 @@ $email = ($this->session->userdata['logged_in']['email']);
 $displayName = ($this->session->userdata['logged_in']['displayName']);
 $displayPicture = ($this->session->userdata['logged_in']['displayPicture']);
 } else {
-header("location:" .base_url());
+// header("location:" .base_url());
 }
 ?>
 <link href="<?php echo base_url('assets/green/css/chat.css');?>" rel="stylesheet" />

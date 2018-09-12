@@ -56,7 +56,6 @@ header("location:" .base_url());
 
 
     <body class="fixed-left">
-        
         <!-- Begin page -->
         <div id="wrapper">
         
@@ -105,20 +104,29 @@ header("location:" .base_url());
                                 // print_r($monthNames);
 
                                 $moni = json_decode(json_encode($laporan), True);
-                                // print_r($moni);
+                                // print_r(count($moni));
                                 // echo json_encode($moni);
-								foreach($moni as $lap){
-									$tanggal[] = $lap['Month(dateTime)']; //ambil bulan
-                                    $tahun[] = $lap['Year(dateTime)'];
-									$jumlah[] = (float) $lap['Total_Rows']; //ambil nilai
-                                    // echo 'aasasa'.$tanggal[0];
-                                    // $month[] = $monthNames[$tanggal[0]-1];
-								}
+								if (count($moni) > 0) {
+                                    foreach($moni as $lap){
+                                        $tanggal[] = $lap['Month(dateTime)']; //ambil bulan
+                                        $tahun[] = $lap['Year(dateTime)'];
+                                        $jumlah[] = (float) $lap['Total_Rows']; //ambil nilai
+                                        // echo 'aasasa'.$tanggal[0];
+                                        // $month[] = $monthNames[$tanggal[0]-1];
+                                    }
+                                } else {
+                                    $tanggal = array();
+                                    $tahun = array();
+                                    $jumlah = array();
+                                }
 								/* end mengambil query*/
 								 // print_r($tanggal);
                                 $month = array();
-                                for($i=0;$i<count($tanggal);$i++){
-                                    array_push($month, $monthNames[$tanggal[$i]-1].'('.$tahun[$i].')');
+                                // print_r($tanggal);
+                                if (count($tanggal) > 0) {
+                                    for($i=0;$i<count($tanggal);$i++){
+                                        array_push($month, $monthNames[$tanggal[$i]-1].'('.$tahun[$i].')');
+                                    }
                                 }
                                 // echo json_encode($month);
 							?>
@@ -134,6 +142,9 @@ header("location:" .base_url());
 
                 <footer class="footer text-right">
                     2015 © Moltran.
+                    <?php 
+                        // echo $this->session->userdata['logged_in']);
+                    ?>
                 </footer>
 
             </div>

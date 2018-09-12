@@ -276,46 +276,7 @@
                             </a>
                             <span class="clearfix"></span>
                         </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="images/users/avatar-7.jpg" alt="">
-                                </div>
-                                <span class="name">Ok</span>
-                                <i class="fa fa-circle away"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="images/users/avatar-8.jpg" alt="">
-                                </div>
-                                <span class="name">Arashasghari</span>
-                                <i class="fa fa-circle offline"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="images/users/avatar-9.jpg" alt="">
-                                </div>
-                                <span class="name">Joshaustin</span>
-                                <i class="fa fa-circle offline"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#">
-                                <div class="avatar">
-                                    <img src="images/users/avatar-10.jpg" alt="">
-                                </div>
-                                <span class="name">Sortino</span>
-                                <i class="fa fa-circle offline"></i>
-                            </a>
-                            <span class="clearfix"></span>
-                        </li>
+                        
                     </ul>  
                 </div>
             </div>

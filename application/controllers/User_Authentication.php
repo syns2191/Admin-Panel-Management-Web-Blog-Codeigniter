@@ -44,9 +44,9 @@ Class User_Authentication extends CI_Controller {
 			$this->load->view('registration_form');
 		} else {
 			$data = array(
-			'user_name' => $this->input->post('username'),
-			'user_email' => $this->input->post('email_value'),
-			'user_password' => $this->input->post('password')
+			'username' => $this->input->post('username'),
+			'email' => $this->input->post('email_value'),
+			'password' => $this->input->post('password')
 			);
 		$result = $this->Login_Database->registration_insert($data);
 		if ($result == TRUE) {
@@ -86,8 +86,8 @@ Class User_Authentication extends CI_Controller {
 				$result = $this->Login_Database->read_user_information($username);
 				if ($result != false) {
 					$session_data = array(
-						'username' => $result[0]->user_name,
-						'email' => $result[0]->user_email,
+						'username' => $result[0]->username,
+						'email' => $result[0]->email,
 						'displayName' => $result[0]->displayName,
 						'displayPicture' => $result[0]->displayPicture,
 					);

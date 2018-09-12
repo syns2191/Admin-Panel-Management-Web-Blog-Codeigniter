@@ -21,7 +21,7 @@
 
 				move_uploaded_file($tempFile, $targetFile);
 				$url = base_url('assets/uploads').'/'.$fileName;
-				$this->db->insert('img_dropzone',array('nama' => $fileName, 'tipe' => $fileType, 'ukuran' => $fileSize,'url'=>$url));
+				$this->db->insert('images',array('name' => $fileName, 'tipe' => $fileType, 'ukuran' => $fileSize,'url'=>$url));
 				echo json_encode(array('url'=>$url));
 			}
 		}

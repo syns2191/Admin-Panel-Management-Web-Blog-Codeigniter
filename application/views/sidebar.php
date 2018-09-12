@@ -6,7 +6,7 @@ $email = ($this->session->userdata['logged_in']['email']);
 $displayName = ($this->session->userdata['logged_in']['displayName']);
 $displayPicture = ($this->session->userdata['logged_in']['displayPicture']);
 } else {
-header("location:" .base_url());
+// header("location:" .base_url());
 }
 ?>
 

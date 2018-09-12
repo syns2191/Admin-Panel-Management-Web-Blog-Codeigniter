@@ -10,7 +10,7 @@ class User_model extends CI_Model
 	function userLogin()
 	{
 		$this->db->select('*');
-		$this->db->from('user');
+		$this->db->from('users');
 		$this->db->order_by('id','desc');
 				
 		return $this->db->get()->result();

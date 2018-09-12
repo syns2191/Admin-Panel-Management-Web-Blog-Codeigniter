@@ -23,7 +23,7 @@ class Post extends CI_Controller {
 
 		$config['base_url'] = site_url('post/index');
         $config['total_rows'] = $this->post_model->count_post();
-        $config['per_page'] = "5";
+        $config['per_page'] = "1";
         $config["uri_segment"] = 3;
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
